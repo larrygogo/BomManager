@@ -1,0 +1,6 @@
+#ifndef BOM_MANAGER_FILE_H
+#define BOM_MANAGER_FILE_H
+
+
+
+#endif //BOM_MANAGER_FILE_H
