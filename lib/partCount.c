@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "part.h"
+#include "partCount.h"
 
-PartNode *createPartListHead() {
-    PartNode *head = NULL;
-    head = (PartNode *) malloc(sizeof(PartNode));
+PartCountNode *creatPartCountListHead() {
+    PartCountNode *head = NULL;
+    head = (PartCountNode *) malloc(sizeof(PartCountNode));
     if (NULL == head) {
         return NULL;
     }
@@ -14,11 +14,11 @@ PartNode *createPartListHead() {
     return head;
 }
 
-int createPart(PartNode *list, Part data) {
-    PartNode *head = list;
-    PartNode *newNode = NULL;
+int createPartCount(PartCountNode *list, PartCount data) {
+    PartCountNode *head = list;
+    PartCountNode *newNode = NULL;
 
-    newNode = (PartNode *) malloc(sizeof(PartNode));
+    newNode = (PartCountNode *) malloc(sizeof(PartCountNode));
     if (NULL == newNode) {
         return -1;
     }
@@ -41,9 +41,9 @@ int createPart(PartNode *list, Part data) {
     return -1;
 }
 
-int deletePartById(PartNode *list, char *id) {
-    PartNode *head = list->next;
-    PartNode *deleteNode = head->next;
+int deletePartCountById(PartCountNode *list, char *id) {
+    PartCountNode *head = list->next;
+    PartCountNode *deleteNode = head->next;
     if (NULL == head->next) {
         printf("Not found id: %s", id);
         return -1;
@@ -61,8 +61,8 @@ int deletePartById(PartNode *list, char *id) {
     return -1;
 }
 
-int updatePartById(PartNode *list, char *id, Part data) {
-    PartNode *head = list->next;
+int updatePartCountById(PartCountNode *list, char *id, PartCount data) {
+    PartCountNode *head = list->next;
     while (head) {
         if (strcmp(head->data.id, id) == 0) {
             head->data = data;
@@ -73,13 +73,13 @@ int updatePartById(PartNode *list, char *id, Part data) {
     return -1;
 }
 
-void showPartList(PartNode *list) {
-    PartNode *head = list;
+void showPartCountList(PartCountNode *list) {
+    PartCountNode *head = list;
     printf("-----------------------------------------------------------------------------------\n");
-    printf("%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "Name", "Used", "Surplus");
+    printf("%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "Part ID", "Part Name", "Count");
     head = head->next;
     while (head != NULL) {
-        printf("%-20s\t%-20s\t%-20d\t%-20d\n", head->data.id, head->data.name, head->data.used, head->data.surplus);
+        printf("%-20s\t%-20s\t%-20d\t%-20d\n", head->data.id, head->data.part.id, head->data.part.name, head->data.count);
         head = head->next;
     }
     printf("-----------------------------------------------------------------------------------\n");
