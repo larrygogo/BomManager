@@ -82,7 +82,7 @@ int updatePartById(PartNode *list, char id[255], Part data) {
 void showPartList(PartNode *list) {
     PartNode *head = list;
     printf("-------------------------------------------------------------------------\n");
-    printf("%-20s %-20s %-20s %-20s\n", "ID", "Name", "Used", "Surplus");
+    printf("%-20s %-20s %-20s %-20s\n", "ID", "名称", "已使用量", "总量");
     head = head->next;
     while (head != NULL) {
         printf("%-20s %-20s %-20d %-20d\n", head->data.id, head->data.name, head->data.used, head->data.surplus);

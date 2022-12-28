@@ -37,7 +37,7 @@ typedef struct partCountNode {
 typedef struct formula {
     char id[255];
     char name[255];
-    PartCountNode *list;
+    PartCountNode *partCountList;
 } Formula;
 
 
@@ -71,6 +71,7 @@ typedef struct planNode {
 typedef struct globalContext {
     PartNode *partList;
     PlanNode *planList;
+    FormulaNode *formulaList;
 } Global;
 
 

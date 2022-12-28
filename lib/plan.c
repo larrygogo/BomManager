@@ -81,7 +81,7 @@ int updatePlanById(PlanNode *list, char id[255], Plan data) {
 void showPlanList(PlanNode *list) {
     PlanNode *head = list;
     printf("-----------------------------------------------------------------------------------\n");
-    printf("%-20s\t%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "Name", "Formula ID", "Formula Name", "Finished Count");
+    printf("%-20s\t%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "计划名称", "配方ID", "配方名称", "已完成次数");
     head = head->next;
     while (head != NULL) {
         printf("%-20s\t%-20s\t%-20s\t%-20s\t%-20s\n", head->data.id, head->data.name, head->data.formula.id, head->data.formula.name);

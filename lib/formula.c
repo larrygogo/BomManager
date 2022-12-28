@@ -41,7 +41,7 @@ int createFormula(FormulaNode *list, Formula data) {
     return -1;
 }
 
-int deleteFormulaById(FormulaNode *list, char *id) {
+int deleteFormulaById(FormulaNode *list, char id[255]) {
     FormulaNode *head = list->next;
     FormulaNode *deleteNode = head->next;
     if (NULL == head->next) {
@@ -61,8 +61,12 @@ int deleteFormulaById(FormulaNode *list, char *id) {
     return -1;
 }
 
-int updateFormulaById(FormulaNode *list, char *id, Formula data) {
+int updateFormulaById(FormulaNode *list, char id[255], Formula data) {
     FormulaNode *head = list->next;
+    if (NULL == list->next) {
+        printf("Not found id: %s\n", id);
+        return -1;
+    }
     while (head) {
         if (strcmp(head->data.id, id) == 0) {
             head->data = data;
@@ -70,6 +74,7 @@ int updateFormulaById(FormulaNode *list, char *id, Formula data) {
         }
         head = head->next;
     }
+    printf("Not found id: %s\n", id);
     return -1;
 }
 
@@ -83,4 +88,18 @@ void showFormulaList(FormulaNode *list) {
         head = head->next;
     }
     printf("-----------------------------------------------------------------------------------\n");
+}
+
+FormulaNode *findFormulaNodeById(FormulaNode *list, char id[255]) {
+    FormulaNode *head = list->next;
+    if (NULL == list->next) {
+        return NULL;
+    }
+    while (head) {
+        if (strcmp(head->data.id, id) == 0) {
+            return head;
+        }
+        head = head->next;
+    }
+    return NULL;
 }
