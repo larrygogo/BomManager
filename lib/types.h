@@ -1,18 +1,18 @@
 #ifndef BOM_MANAGER_TYPES_H
 #define BOM_MANAGER_TYPES_H
 
-/** ç‰©æ–™ */
+/** ÎïÁÏ */
 typedef struct part {
-    /* ç‰©æ–™ç¼–å· */
-    const char *id;
+    /* ÎïÁÏ±àºÅ */
+    char id[255];
 
-    /* ç‰©æ–™åç§° */
-    const char *name;
+    /* ÎïÁÏÃû³Æ */
+    char name[255];
 
-    /* å·²ä½¿ç”¨é‡ */
+    /* ÒÑÊ¹ÓÃÁ¿ */
     int used;
 
-    /* å‰©ä½™é‡ */
+    /* Ê£ÓàÁ¿ */
     int surplus;
 } Part;
 
@@ -21,9 +21,9 @@ typedef struct partNode {
     struct partNode *next;
 } PartNode;
 
-/** ç‰©æ–™ç”¨é‡ */
+/** ÎïÁÏÓÃÁ¿ */
 typedef struct partCount {
-    char *id;
+    char id[255];
     Part part;
     int count;
 } PartCount;
@@ -33,10 +33,10 @@ typedef struct partCountNode {
     struct partCountNode *next;
 } PartCountNode;
 
-/** é…æ–¹ */
+/** Åä·½ */
 typedef struct formula {
-    char *id;
-    char *name;
+    char id[255];
+    char name[255];
     PartCountNode *list;
 } Formula;
 
@@ -47,18 +47,18 @@ typedef struct formulaNode {
 } FormulaNode;
 
 
-/** ç”Ÿäº§è®¡åˆ’ */
+/** Éú²ú¼Æ»® */
 typedef struct plan {
-    /* è®¡åˆ’ç¼–å· */
-    char *id;
+    /* ¼Æ»®±àºÅ */
+    char id[255];
 
-    /* è®¡åˆ’åç§° */
-    char *name;
+    /* ¼Æ»®Ãû³Æ */
+    char name[255];
 
-    /* é…æ–¹ */
+    /* Åä·½ */
     Formula formula;
 
-    /* å·²å®Œæˆæ•° */
+    /* ÒÑÍê³ÉÊı */
     int finishedCount;
 } Plan;
 

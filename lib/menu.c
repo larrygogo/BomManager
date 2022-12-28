@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "file.h"
 #include "menu.h"
 #include "part.h"
 
 void showMainMenu(Global *global) {
-    printf("--------------æ¬¢è¿Žä½¿ç”¨--------------\n");
-    printf("1. ç‰©æ–™ç®¡ç†\n");
-    printf("2. ç”Ÿäº§è®¡åˆ’ç®¡ç†\n");
-    printf("0. é€€å‡ºç³»ç»Ÿ\n");
+    printf("--------------»¶Ó­Ê¹ÓÃ--------------\n");
+    printf("1. ÎïÁÏ¹ÜÀí\n");
+    printf("2. Éú²ú¼Æ»®¹ÜÀí\n");
+    printf("0. ÍË³öÏµÍ³\n");
     printf("-----------------------------------\n");
 }
 
 void checkMainMenuNumber(Global *global) {
     int num;
     while (1) {
-        printf("è¾“å…¥ç¼–å·ï¼š");
+        printf("ÊäÈë±àºÅ£º");
         scanf("%d", &num);
         switch (num) {
             case 1:
@@ -27,19 +28,20 @@ void checkMainMenuNumber(Global *global) {
             case 0:
                 exit(0);
             default:
-                printf("ç¼–å·è¾“å…¥é”™è¯¯\n");
+                printf("±àºÅÊäÈë´íÎó\n");
         }
         checkMainMenuNumber(global);
     }
 }
 
 void showPartMenu(Global *global) {
-    printf("--------------ç‰©æ–™ç®¡ç†--------------\n");
-    printf("1. ç‰©æ–™åˆ—è¡¨\n");
-    printf("2. åˆ›å»ºç‰©æ–™\n");
-    printf("3. åˆ é™¤ç‰©æ–™\n");
-    printf("4. è¿”å›žä¸Šçº§\n");
-    printf("0. é€€å‡º\n");
+    printf("--------------ÎïÁÏ¹ÜÀí--------------\n");
+    printf("1. ÎïÁÏÁÐ±í\n");
+    printf("2. ´´½¨ÎïÁÏ\n");
+    printf("3. ¸üÐÂÎïÁÏ\n");
+    printf("4. É¾³ýÎïÁÏ\n");
+    printf("5. ·µ»ØÉÏ¼¶\n");
+    printf("0. ÍË³ö\n");
     printf("-----------------------------------\n");
     checkPartMenuNumber(global);
 }
@@ -47,7 +49,7 @@ void showPartMenu(Global *global) {
 void checkPartMenuNumber(Global *global) {
     int num;
     while (1) {
-        printf("è¾“å…¥ç¼–å·ï¼š");
+        printf("ÊäÈë±àºÅ£º");
         scanf("%d", &num);
         switch (num) {
             case 1:
@@ -57,34 +59,84 @@ void checkPartMenuNumber(Global *global) {
                 showCreatePartMenu(global);
                 break;
             case 3:
+                showUpdatePartMenu(global);
                 break;
             case 4:
+                showDeletePartMenu(global);
+                break;
+            case 5:
                 showMainMenu(global);
                 checkMainMenuNumber(global);
                 break;
             case 0:
                 exit(0);
             default:
-                printf("ç¼–å·è¾“å…¥é”™è¯¯\n");
+                printf("±àºÅÊäÈë´íÎó\n");
         }
         checkPartMenuNumber(global);
     }
 }
 
 void showCreatePartMenu(Global *global) {
-    Part *part;
-    part = (Part *) malloc(sizeof (Part));
-    if (NULL == part) {
-        printf("å†…å­˜ä¸è¶³ï¼Œåˆ›å»ºå¤±è´¥");
-    }
-    printf("--------------åˆ›å»ºç‰©æ–™--------------\n");
-    printf("è¯·è¾“å…¥ç‰©æ–™IDï¼š");
-    scanf("%s", part->id);
-    printf("è¯·è¾“å…¥ç‰©æ–™åç§°ï¼š");
-    scanf("%s", part->name);
-    printf("è¯·è¾“å…¥ç‰©æ–™æ•°é‡ï¼š");
-    scanf("%d", &part->surplus);
-    part->used = 0;
-    createPart(global->partList, *part);
+    char id[255], name[255];
+    int surplus;
+    Part part;
+    printf("--------------´´½¨ÎïÁÏ--------------\n");
+    printf("ÇëÊäÈëÎïÁÏID£º");
+    scanf("%s", &part.id);
+    printf("ÇëÊäÈëÎïÁÏÃû³Æ£º");
+    scanf("%s", &part.name);
+    printf("ÇëÊäÈëÎïÁÏÊýÁ¿£º");
+    scanf("%d", &part.surplus);
+    part.used = 0;
+    createPart(global->partList, part);
     showPartList(global->partList);
+}
+
+void showDeletePartMenu(Global *global) {
+    char id[255];
+    int res = -1;
+    printf("ÇëÊäÈëÒªÉ¾³ýµÄÎïÁÏID£º");
+    scanf("%s", &id);
+    res = deletePartById(global->partList, id);
+    if(res == 0) {
+        printf("ÎïÁÏID£º%s É¾³ý³É¹¦\n", id);
+    } else {
+        printf("ÎïÁÏID£º%s É¾³ýÊ§°Ü\n", id);
+    }
+    showPartList(global->partList);
+}
+
+void showUpdatePartMenu(Global *global) {
+    char id[255], newId[255];
+    char name[255];
+    int used;
+    int surplus;
+    printf("ÇëÊäÈëÒª¸üÐÂµÄÎïÁÏID£º");
+    scanf("%s", &id);
+    PartNode *node = findPartNodeById(global->partList, id);
+    if(node == NULL) {
+        printf("Not found id: %s\n", id);
+    } else {
+        printf("ÇëÊäÈëÎïÁÏµÄÐÂID£º");
+        scanf("%s", &newId);
+        PartNode *newNode = findPartNodeById(global->partList, newId);
+        if(newNode != NULL && strcmp(newId, id) != 0) {
+            printf("id: %s already exists\n", id);
+        } else {
+            printf("ÇëÊäÈëÎïÁÏµÄÐÂÃû³Æ£º");
+            scanf("%s", &name);
+            printf("ÇëÊäÈëÎïÁÏµÄÐÂÒÑÊ¹ÓÃÁ¿£º");
+            scanf("%d", &used);
+            printf("ÇëÊäÈëÎïÁÏµÄÐÂ×ÜÁ¿£º");
+            scanf("%d", &surplus);
+            Part part;
+            part.id[0] = *newId;
+            part.name[0] = *name;
+            part.used = used;
+            part.surplus = surplus;
+            updatePartById(global->partList, id, part);
+            showPartList(global->partList);
+        }
+    }
 }

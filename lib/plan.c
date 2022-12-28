@@ -44,7 +44,7 @@ int deletePlanById(PlanNode *list, char *id) {
     PlanNode *head = list->next;
     PlanNode *deleteNode = head->next;
     if (NULL == head->next) {
-        printf("Not found id: %s", id);
+        printf("Not found id: %s\n", id);
         return -1;
     }
     while (head) {
@@ -57,10 +57,16 @@ int deletePlanById(PlanNode *list, char *id) {
         head = head->next;
         deleteNode = deleteNode->next;
     }
+    printf("Not found id: %s\n", id);
+    return -1;
 }
 
-int updatePlanById(PlanNode *list, char *id, Plan data) {
+int updatePlanById(PlanNode *list, char id[255], Plan data) {
     PlanNode *head = list->next;
+    if (NULL == head->next) {
+        printf("Not found id: %s\n", id);
+        return -1;
+    }
     while (head) {
         if (strcmp(head->data.id, id) == 0) {
             head->data = data;
@@ -68,6 +74,8 @@ int updatePlanById(PlanNode *list, char *id, Plan data) {
         }
         head = head->next;
     }
+    printf("Not found id: %s\n", id);
+    return -1;
 }
 
 void showPlanList(PlanNode *list) {
@@ -81,3 +89,4 @@ void showPlanList(PlanNode *list) {
     }
     printf("-----------------------------------------------------------------------------------\n");
 }
+
