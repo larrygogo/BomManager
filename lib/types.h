@@ -47,7 +47,6 @@ typedef struct formulaNode {
 } FormulaNode;
 
 
-
 /** 生产计划 */
 typedef struct plan {
     /* 计划编号 */
@@ -67,5 +66,12 @@ typedef struct planNode {
     Plan data;
     struct planNode *next;
 } PlanNode;
+
+
+typedef struct globalContext {
+    PartNode *partList;
+    PlanNode *planList;
+} Global;
+
 
 #endif //BOM_MANAGER_TYPES_H
