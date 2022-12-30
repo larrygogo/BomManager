@@ -26,8 +26,9 @@ int createPart(PartNode *list, Part data) {
     newNode->next = NULL;
 
     while (head) {
+        printf("%d\n", NULL != head->next);
         if(NULL != head->next && strcmp(head->next->data.id, data.id) == 0) {
-            printf("id: %s already exists\n", data.id);
+            printf("id: %s %s already exists\n", head->next->data.id, data.id);
             free(newNode);
             return -1;
         }
@@ -42,10 +43,10 @@ int createPart(PartNode *list, Part data) {
     return -1;
 }
 
-int deletePartById(PartNode *list, char id[255]) {
+int deletePartById(PartNode *list, char *id) {
     PartNode *head = list;
     PartNode *deleteNode = head->next;
-    if (NULL == list->next) {
+    if (NULL == head->next) {
         printf("Not found id: %s\n", id);
         return -1;
     }
@@ -62,7 +63,7 @@ int deletePartById(PartNode *list, char id[255]) {
     return -1;
 }
 
-int updatePartById(PartNode *list, char id[255], Part data) {
+int updatePartById(PartNode *list, char *id, Part data) {
     PartNode *head = list->next;
     if (NULL == list->next) {
         printf("Not found id: %s\n", id);
@@ -81,17 +82,17 @@ int updatePartById(PartNode *list, char id[255], Part data) {
 
 void showPartList(PartNode *list) {
     PartNode *head = list;
-    printf("-------------------------------------------------------------------------\n");
-    printf("%-20s %-20s %-20s %-20s\n", "ID", "名称", "已使用量", "总量");
+    printf("-------------------------------- Part List -----------------------------------\n");
+    printf("%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "Part Name", "Total", "Used");
     head = head->next;
     while (head != NULL) {
-        printf("%-20s %-20s %-20d %-20d\n", head->data.id, head->data.name, head->data.used, head->data.surplus);
+        printf("%-20s\t%-20s\t%-20d\t%-20d\n", head->data.id, head->data.name, head->data.total, head->data.used);
         head = head->next;
     }
-    printf("--------------------------------------------------------------------------\n");
+    printf("------------------------------------------------------------------------------\n");
 }
 
-PartNode *findPartNodeById(PartNode *list, char id[255]) {
+PartNode *findPartNodeById(PartNode *list, char *id) {
     PartNode *head = list->next;
     if (NULL == list->next) {
         return NULL;

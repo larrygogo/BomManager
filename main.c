@@ -1,6 +1,4 @@
-#include <stdio.h>
 #include "lib/types.h"
-#include "lib/part.h"
 #include "lib/menu.h"
 #include "lib/utils.h"
 

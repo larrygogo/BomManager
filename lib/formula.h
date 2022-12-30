@@ -16,8 +16,5 @@ void showFormulaList(FormulaNode *list);
 
 FormulaNode *findFormulaNodeById(FormulaNode *list, char *id);
 
-int addPartCountToFormulaById(FormulaNode *list, char *id, PartCount partCount);
-
-int removePartCountFromFormulaById(FormulaNode *list, char *id, char *partCountId);
-
+int executeFormulaById(FormulaNode *list, PartNode *partList, char *id);
 #endif //BOM_MANAGER_FORMULA_H

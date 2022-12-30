@@ -2,7 +2,9 @@
 #define BOM_MANAGER_PART_COUNT_H
 #include "types.h"
 
-PartCountNode createPartCountListHead();
+PartCountNode *createPartCountListHead();
+
+PartCountNode *findPartCountNodeById(PartCountNode *list, char *id);
 
 int createPartCount(PartCountNode *list, PartCount data);
 

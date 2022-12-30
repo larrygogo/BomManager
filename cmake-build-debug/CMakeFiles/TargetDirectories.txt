@@ -1,3 +1,0 @@
-C:/Users/35122/CLionProjects/BomManager/cmake-build-debug/CMakeFiles/BomManager.dir
-C:/Users/35122/CLionProjects/BomManager/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/35122/CLionProjects/BomManager/cmake-build-debug/CMakeFiles/rebuild_cache.dir
