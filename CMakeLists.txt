@@ -3,4 +3,4 @@ project(BomManager)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(BomManager main.c lib/menu.h lib/menu.c lib/types.h lib/part.c lib/part.h lib/formula.c lib/formula.h lib/partCount.c lib/partCount.h lib/utils.c lib/utils.h)
+add_executable(BomManager main.c core/menu.h core/menu.c core/types.h core/part.c core/part.h core/formula.c core/formula.h core/partCount.c core/partCount.h core/utils.c core/utils.h)
