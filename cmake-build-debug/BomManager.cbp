@@ -80,37 +80,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/formula.c">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/core/BOMFormula.c">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/formula.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/core/BOMMenu.c">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/menu.c">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/core/BOMPart.c">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/menu.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/core/BOMPartCount.c">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/part.c">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/core/BOMUtils.c">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/part.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMFormula.h">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/partCount.c">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMMenu.h">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/partCount.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMPart.h">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/types.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMPartCount.h">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/utils.c">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMTypes.h">
 			<Option target="BomManager"/>
 		</Unit>
-		<Unit filename="/Users/larry/CLionProjects/BomManager/lib/utils.h">
+		<Unit filename="/Users/larry/CLionProjects/BomManager/include/BOMUtils.h">
 			<Option target="BomManager"/>
 		</Unit>
 		<Unit filename="/Users/larry/CLionProjects/BomManager/main.c">

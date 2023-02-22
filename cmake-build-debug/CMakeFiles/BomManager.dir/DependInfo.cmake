@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/larry/CLionProjects/BomManager/lib/formula.c" "CMakeFiles/BomManager.dir/lib/formula.c.o" "gcc" "CMakeFiles/BomManager.dir/lib/formula.c.o.d"
-  "/Users/larry/CLionProjects/BomManager/lib/menu.c" "CMakeFiles/BomManager.dir/lib/menu.c.o" "gcc" "CMakeFiles/BomManager.dir/lib/menu.c.o.d"
-  "/Users/larry/CLionProjects/BomManager/lib/part.c" "CMakeFiles/BomManager.dir/lib/part.c.o" "gcc" "CMakeFiles/BomManager.dir/lib/part.c.o.d"
-  "/Users/larry/CLionProjects/BomManager/lib/partCount.c" "CMakeFiles/BomManager.dir/lib/partCount.c.o" "gcc" "CMakeFiles/BomManager.dir/lib/partCount.c.o.d"
-  "/Users/larry/CLionProjects/BomManager/lib/utils.c" "CMakeFiles/BomManager.dir/lib/utils.c.o" "gcc" "CMakeFiles/BomManager.dir/lib/utils.c.o.d"
+  "/Users/larry/CLionProjects/BomManager/core/BOMFormula.c" "CMakeFiles/BomManager.dir/core/BOMFormula.c.o" "gcc" "CMakeFiles/BomManager.dir/core/BOMFormula.c.o.d"
+  "/Users/larry/CLionProjects/BomManager/core/BOMMenu.c" "CMakeFiles/BomManager.dir/core/BOMMenu.c.o" "gcc" "CMakeFiles/BomManager.dir/core/BOMMenu.c.o.d"
+  "/Users/larry/CLionProjects/BomManager/core/BOMPart.c" "CMakeFiles/BomManager.dir/core/BOMPart.c.o" "gcc" "CMakeFiles/BomManager.dir/core/BOMPart.c.o.d"
+  "/Users/larry/CLionProjects/BomManager/core/BOMPartCount.c" "CMakeFiles/BomManager.dir/core/BOMPartCount.c.o" "gcc" "CMakeFiles/BomManager.dir/core/BOMPartCount.c.o.d"
+  "/Users/larry/CLionProjects/BomManager/core/BOMUtils.c" "CMakeFiles/BomManager.dir/core/BOMUtils.c.o" "gcc" "CMakeFiles/BomManager.dir/core/BOMUtils.c.o.d"
   "/Users/larry/CLionProjects/BomManager/main.c" "CMakeFiles/BomManager.dir/main.c.o" "gcc" "CMakeFiles/BomManager.dir/main.c.o.d"
   )
 

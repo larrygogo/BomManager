@@ -129,125 +129,125 @@ BomManager/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/build
 .PHONY : BomManager/fast
 
-lib/formula.o: lib/formula.c.o
-.PHONY : lib/formula.o
+core/BOMFormula.o: core/BOMFormula.c.o
+.PHONY : core/BOMFormula.o
 
 # target to build an object file
-lib/formula.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/formula.c.o
-.PHONY : lib/formula.c.o
+core/BOMFormula.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMFormula.c.o
+.PHONY : core/BOMFormula.c.o
 
-lib/formula.i: lib/formula.c.i
-.PHONY : lib/formula.i
+core/BOMFormula.i: core/BOMFormula.c.i
+.PHONY : core/BOMFormula.i
 
 # target to preprocess a source file
-lib/formula.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/formula.c.i
-.PHONY : lib/formula.c.i
+core/BOMFormula.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMFormula.c.i
+.PHONY : core/BOMFormula.c.i
 
-lib/formula.s: lib/formula.c.s
-.PHONY : lib/formula.s
+core/BOMFormula.s: core/BOMFormula.c.s
+.PHONY : core/BOMFormula.s
 
 # target to generate assembly for a file
-lib/formula.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/formula.c.s
-.PHONY : lib/formula.c.s
+core/BOMFormula.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMFormula.c.s
+.PHONY : core/BOMFormula.c.s
 
-lib/menu.o: lib/menu.c.o
-.PHONY : lib/menu.o
+core/BOMMenu.o: core/BOMMenu.c.o
+.PHONY : core/BOMMenu.o
 
 # target to build an object file
-lib/menu.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/menu.c.o
-.PHONY : lib/menu.c.o
+core/BOMMenu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMMenu.c.o
+.PHONY : core/BOMMenu.c.o
 
-lib/menu.i: lib/menu.c.i
-.PHONY : lib/menu.i
+core/BOMMenu.i: core/BOMMenu.c.i
+.PHONY : core/BOMMenu.i
 
 # target to preprocess a source file
-lib/menu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/menu.c.i
-.PHONY : lib/menu.c.i
+core/BOMMenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMMenu.c.i
+.PHONY : core/BOMMenu.c.i
 
-lib/menu.s: lib/menu.c.s
-.PHONY : lib/menu.s
+core/BOMMenu.s: core/BOMMenu.c.s
+.PHONY : core/BOMMenu.s
 
 # target to generate assembly for a file
-lib/menu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/menu.c.s
-.PHONY : lib/menu.c.s
+core/BOMMenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMMenu.c.s
+.PHONY : core/BOMMenu.c.s
 
-lib/part.o: lib/part.c.o
-.PHONY : lib/part.o
+core/BOMPart.o: core/BOMPart.c.o
+.PHONY : core/BOMPart.o
 
 # target to build an object file
-lib/part.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/part.c.o
-.PHONY : lib/part.c.o
+core/BOMPart.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPart.c.o
+.PHONY : core/BOMPart.c.o
 
-lib/part.i: lib/part.c.i
-.PHONY : lib/part.i
+core/BOMPart.i: core/BOMPart.c.i
+.PHONY : core/BOMPart.i
 
 # target to preprocess a source file
-lib/part.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/part.c.i
-.PHONY : lib/part.c.i
+core/BOMPart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPart.c.i
+.PHONY : core/BOMPart.c.i
 
-lib/part.s: lib/part.c.s
-.PHONY : lib/part.s
+core/BOMPart.s: core/BOMPart.c.s
+.PHONY : core/BOMPart.s
 
 # target to generate assembly for a file
-lib/part.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/part.c.s
-.PHONY : lib/part.c.s
+core/BOMPart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPart.c.s
+.PHONY : core/BOMPart.c.s
 
-lib/partCount.o: lib/partCount.c.o
-.PHONY : lib/partCount.o
+core/BOMPartCount.o: core/BOMPartCount.c.o
+.PHONY : core/BOMPartCount.o
 
 # target to build an object file
-lib/partCount.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/partCount.c.o
-.PHONY : lib/partCount.c.o
+core/BOMPartCount.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPartCount.c.o
+.PHONY : core/BOMPartCount.c.o
 
-lib/partCount.i: lib/partCount.c.i
-.PHONY : lib/partCount.i
+core/BOMPartCount.i: core/BOMPartCount.c.i
+.PHONY : core/BOMPartCount.i
 
 # target to preprocess a source file
-lib/partCount.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/partCount.c.i
-.PHONY : lib/partCount.c.i
+core/BOMPartCount.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPartCount.c.i
+.PHONY : core/BOMPartCount.c.i
 
-lib/partCount.s: lib/partCount.c.s
-.PHONY : lib/partCount.s
+core/BOMPartCount.s: core/BOMPartCount.c.s
+.PHONY : core/BOMPartCount.s
 
 # target to generate assembly for a file
-lib/partCount.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/partCount.c.s
-.PHONY : lib/partCount.c.s
+core/BOMPartCount.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMPartCount.c.s
+.PHONY : core/BOMPartCount.c.s
 
-lib/utils.o: lib/utils.c.o
-.PHONY : lib/utils.o
+core/BOMUtils.o: core/BOMUtils.c.o
+.PHONY : core/BOMUtils.o
 
 # target to build an object file
-lib/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/utils.c.o
-.PHONY : lib/utils.c.o
+core/BOMUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMUtils.c.o
+.PHONY : core/BOMUtils.c.o
 
-lib/utils.i: lib/utils.c.i
-.PHONY : lib/utils.i
+core/BOMUtils.i: core/BOMUtils.c.i
+.PHONY : core/BOMUtils.i
 
 # target to preprocess a source file
-lib/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/utils.c.i
-.PHONY : lib/utils.c.i
+core/BOMUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMUtils.c.i
+.PHONY : core/BOMUtils.c.i
 
-lib/utils.s: lib/utils.c.s
-.PHONY : lib/utils.s
+core/BOMUtils.s: core/BOMUtils.c.s
+.PHONY : core/BOMUtils.s
 
 # target to generate assembly for a file
-lib/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/lib/utils.c.s
-.PHONY : lib/utils.c.s
+core/BOMUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BomManager.dir/build.make CMakeFiles/BomManager.dir/core/BOMUtils.c.s
+.PHONY : core/BOMUtils.c.s
 
 main.o: main.c.o
 .PHONY : main.o
@@ -282,21 +282,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... BomManager"
-	@echo "... lib/formula.o"
-	@echo "... lib/formula.i"
-	@echo "... lib/formula.s"
-	@echo "... lib/menu.o"
-	@echo "... lib/menu.i"
-	@echo "... lib/menu.s"
-	@echo "... lib/part.o"
-	@echo "... lib/part.i"
-	@echo "... lib/part.s"
-	@echo "... lib/partCount.o"
-	@echo "... lib/partCount.i"
-	@echo "... lib/partCount.s"
-	@echo "... lib/utils.o"
-	@echo "... lib/utils.i"
-	@echo "... lib/utils.s"
+	@echo "... core/BOMFormula.o"
+	@echo "... core/BOMFormula.i"
+	@echo "... core/BOMFormula.s"
+	@echo "... core/BOMMenu.o"
+	@echo "... core/BOMMenu.i"
+	@echo "... core/BOMMenu.s"
+	@echo "... core/BOMPart.o"
+	@echo "... core/BOMPart.i"
+	@echo "... core/BOMPart.s"
+	@echo "... core/BOMPartCount.o"
+	@echo "... core/BOMPartCount.i"
+	@echo "... core/BOMPartCount.s"
+	@echo "... core/BOMUtils.o"
+	@echo "... core/BOMUtils.i"
+	@echo "... core/BOMUtils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

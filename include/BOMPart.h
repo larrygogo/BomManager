@@ -1,7 +1,7 @@
 #ifndef BOM_MANAGER_PART_H
 #define BOM_MANAGER_PART_H
 
-#include "types.h"
+#include "BOMTypes.h"
 
 /**
  * 创建头结点

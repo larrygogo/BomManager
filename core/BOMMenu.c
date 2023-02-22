@@ -1,24 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "menu.h"
-#include "part.h"
-#include "formula.h"
-#include "partCount.h"
+#include "../include/BOMMenu.h"
+#include "../include/BOMPart.h"
+#include "../include/BOMFormula.h"
+#include "../include/BOMPartCount.h"
 
 void showMainMenu(Global *global) {
-    printf("--------------Welcome--------------\n");
-    printf("1. Part manage\n");
-    printf("2. Formula manage\n");
-//    printf("3. Plan manage\n");
-    printf("0. Exit\n");
-    printf("-----------------------------------\n");
+    printf("┌─────────────── BOM System ───────────────┐\n");
+    printf("│ 1. Part manage                           │\n");
+    printf("│ 2. Formula manage                        │\n");
+    printf("│ 0. Exit                                  │\n");
+    printf("└─────────────── BOM System ───────────────┘\n");
 }
 
 void checkMainMenuNumber(Global *global) {
     int num;
     while (1) {
-        printf("Please enter the number: ");
+        printf("Please input your choice:");
         scanf("%d", &num);
         switch (num) {
             case 1:
@@ -27,8 +26,6 @@ void checkMainMenuNumber(Global *global) {
             case 2:
                 showFormulaMenu(global);
                 break;
-//            case 3:
-//                showPlanMenu(global);
             case 0:
                 exit(0);
             default:
@@ -39,34 +36,34 @@ void checkMainMenuNumber(Global *global) {
 }
 
 void showPartMenu(Global *global) {
-    printf("--------------Part manage--------------\n");
-    printf("1. Create part\n");
-    printf("2. Delete part\n");
-    printf("3. Update part\n");
-    printf("4. Show all parts\n");
-    printf("0. Back\n");
-    printf("-1. Exit\n");
-    printf("-----------------------------------\n");
+    printf("┌─────────────── Part manage ───────────────┐\n");
+    printf("│ 1. Show all parts                         │\n");
+    printf("│ 2. Create part                            │\n");
+    printf("│ 3. Delete part                            │\n");
+    printf("│ 4. Update part                            │\n");
+    printf("│ 0. Back                                   │\n");
+    printf("│ -1. Exit                                  │\n");
+    printf("└─────────────── BOM System ────────────────┘\n");
     checkPartMenuNumber(global);
 }
 
 void checkPartMenuNumber(Global *global) {
     int num;
     while (1) {
-        printf("Please enter the number: ");
+        printf("Please input your choice:");
         scanf("%d", &num);
         switch (num) {
             case 1:
-                showCreatePartMenu(global);
+                showPartList(global->partList);
                 break;
             case 2:
-                showDeletePartMenu(global);
+                showCreatePartMenu(global);
                 break;
             case 3:
-                showUpdatePartMenu(global);
+                showDeletePartMenu(global);
                 break;
             case 4:
-                showPartList(global->partList);
+                showUpdatePartMenu(global);
                 break;
             case 0:
                 showMainMenu(global);
@@ -86,7 +83,7 @@ void showCreatePartMenu(Global *global) {
     char *id = (char *) malloc(sizeof(char));
     char *name = (char *) malloc(sizeof(char));
     Part part;
-    printf("--------------Create Part--------------\n");
+    printf("─────────────── Create Part ───────────────\n");
     printf("Please enter the part id: ");
     scanf("%s", id);
     printf("Please enter the part name: ");
@@ -97,6 +94,8 @@ void showCreatePartMenu(Global *global) {
     part.name = name;
     part.used = 0;
     createPart(global->partList, part);
+    writePartToFile(global);
+    printf("Create part success!\n");
     showPartList(global->partList);
 
 }
@@ -104,7 +103,7 @@ void showCreatePartMenu(Global *global) {
 void showDeletePartMenu(Global *global) {
     char *id = (char *) malloc(sizeof(char));
     int res;
-    printf("--------------Delete Part--------------\n");
+    printf("─────────────── Delete Part ───────────────\n");
     printf("Please enter the part id: ");
     scanf("%s", id);
     res = deletePartById(global->partList, id);
@@ -122,7 +121,7 @@ void showUpdatePartMenu(Global *global) {
     char *name = (char *) malloc(sizeof(char));
     int used;
     int total;
-    printf("--------------Update Part--------------\n");
+    printf("─────────────── Update Part ───────────────\n");
     printf("Please enter the part id: ");
     scanf("%s", id);
     PartNode *node = findPartNodeById(global->partList, id);
@@ -147,42 +146,43 @@ void showUpdatePartMenu(Global *global) {
             part.used = used;
             part.total = total;
             updatePartById(global->partList, id, part);
+            writePartToFile(global);
             showPartList(global->partList);
         }
     }
 }
 
 void showFormulaMenu(Global *global) {
-    printf("--------------Formula manage--------------\n");
-    printf("1. Create formula\n");
-    printf("2. Delete formula\n");
-    printf("3. Update formula\n");
-    printf("4. Show all formulas\n");
-    printf("5. Show formulas details\n");
-    printf("6. Execute formula\n");
-    printf("0. Back\n");
-    printf("-1. Exit\n");
-    printf("-----------------------------------\n");
+    printf("┌─────────────── Formula manage ───────────────┐\n");
+    printf("│ 1. Show all formulas                         │\n");
+    printf("│ 2. Create formula                            │\n");
+    printf("│ 3. Delete formula                            │\n");
+    printf("│ 4. Update formula                            │\n");
+    printf("│ 5. Show formulas details                     │\n");
+    printf("│ 6. Execute formula                           │\n");
+    printf("│ 0. Back                                      │\n");
+    printf("│ -1. Exit                                     │\n");
+    printf("└───────────────── BOM System ─────────────────┘\n");
     checkFormulaMenuNumber(global);
 }
 
 void checkFormulaMenuNumber(Global *global) {
     int num;
     while (1) {
-        printf("Please enter the number: ");
+        printf("Please input your choice:");
         scanf("%d", &num);
         switch (num) {
             case 1:
-                showCreateFormulaMenu(global);
+                showFormulaList(global->formulaList);
                 break;
             case 2:
-                showDeleteFormulaMenu(global);
+                showCreateFormulaMenu(global);
                 break;
             case 3:
-                showUpdateFormulaMenu(global);
+                showDeleteFormulaMenu(global);
                 break;
             case 4:
-                showFormulaList(global->formulaList);
+                showUpdateFormulaMenu(global);
                 break;
             case 5:
                 showFormulaDetailMenu(global);
@@ -207,7 +207,7 @@ void showCreateFormulaMenu(Global *global) {
     char *id = (char *) malloc(sizeof(char));
     char *name = (char *) malloc(sizeof(char));
     Formula formula;
-    printf("--------------Create Formula--------------\n");
+    printf("─────────────── Create Formula ───────────────\n");
     printf("Please enter the formula id: ");
     scanf("%s", id);
     printf("Please enter the formula name: ");
@@ -217,18 +217,20 @@ void showCreateFormulaMenu(Global *global) {
     formula.executeCount = 0;
     formula.partCountList = createPartCountListHead();
     createFormula(global->formulaList, formula);
+    writeFormulaToFile(global);
     showFormulaList(global->formulaList);
 }
 
 void showDeleteFormulaMenu(Global *global) {
     char *id = (char *) malloc(sizeof(char));
     int res;
-    printf("--------------Delete Formula--------------\n");
+    printf("─────────────── Delete Formula ───────────────\n");
     printf("Please enter the formula id: ");
     scanf("%s", id);
     res = deleteFormulaById(global->formulaList, id);
     if (res == 0) {
         printf("Delete formula success!\n");
+        writeFormulaToFile(global);
     } else {
         printf("Delete formula failed!\n");
     }
@@ -240,7 +242,7 @@ void showUpdateFormulaMenu(Global *global) {
     char *newId = (char *) malloc(sizeof(char));
     char *name = (char *) malloc(sizeof(char));
     int executeCount;
-    printf("--------------Update Formula--------------\n");
+    printf("─────────────── Update Formula ───────────────\n");
     printf("Please enter the formula id: ");
     scanf("%s", id);
     FormulaNode *node = findFormulaNodeById(global->formulaList, id);
@@ -262,6 +264,7 @@ void showUpdateFormulaMenu(Global *global) {
             formula.name = name;
             formula.executeCount = executeCount;
             updateFormulaById(global->formulaList, id, formula);
+            writeFormulaToFile(global);
             showFormulaList(global->formulaList);
         }
     }
@@ -283,10 +286,11 @@ void showFormulaDetailMenu(Global *global) {
 void showExecuteFormulaMenu(Global *global) {
     char *id = (char *) malloc(sizeof(char));
     showFormulaList(global->formulaList);
-    printf("------------ Execute Formula -------------\n");
+    printf("─────────────── Execute Formula ───────────────\n");
     printf("Please enter the formula id: ");
     scanf("%s", id);
     executeFormulaById(global->formulaList, global->partList, id);
+    writeFormulaToFile(global);
 }
 
 
@@ -295,14 +299,14 @@ void showPartCountMenu(Global *global, FormulaNode *formulaNode) {
     showPartCountList(formulaNode->data.partCountList);
 
     int num;
-    printf("--------------Formula details manage--------------\n");
-    printf("1. Add detail\n");
-    printf("2. Delete detail\n");
-    printf("3. Update detail\n");
-    printf("0. Back\n");
-    printf("-1. Exit\n");
-    printf("-----------------------------------\n");
-    printf("Please enter the number: ");
+    printf("┌────────── Formula details manage ──────────┐\n");
+    printf("│ 1. Add detail                              │\n");
+    printf("│ 2. Delete detail                           │\n");
+    printf("│ 3. Update detail                           │\n");
+    printf("│ 0. Back                                    │\n");
+    printf("│ -1. Exit                                   │\n");
+    printf("└──────────────── BOM System ────────────────┘\n");
+    printf("Please input your choice:");
     scanf("%d", &num);
     switch (num) {
         case 1:
@@ -326,7 +330,7 @@ void showPartCountMenu(Global *global, FormulaNode *formulaNode) {
 
 void showCreatePartCountMenu(Global *global, FormulaNode *formulaNode) {
     char *id = (char *) malloc(sizeof(char));
-    printf("--------------Add formula detail--------------\n");
+    printf("─────────────── Add formula detail ───────────────\n");
     PartCount partCount;
     printf("Please enter the part id: ");
     scanf("%s", id);
@@ -339,6 +343,7 @@ void showCreatePartCountMenu(Global *global, FormulaNode *formulaNode) {
         scanf("%d", &partCount.count);
         partCount.part = partNode->data;
         createPartCount(formulaNode->data.partCountList, partCount);
+        writeFormulaToFile(global);
         showPartCountMenu(global, formulaNode);
     }
 }
@@ -346,12 +351,15 @@ void showCreatePartCountMenu(Global *global, FormulaNode *formulaNode) {
 void showDeletePartCountMenu(Global *global, FormulaNode *formulaNode) {
     char *id = (char *) malloc(sizeof(char));
     int res;
-    printf("--------------Delete formula detail--------------\n");
+    printf("─────────────── Delete formula detail ───────────────\n");
     printf("Please enter the formula detail part id: ");
     scanf("%s", id);
     res = deletePartCountById(formulaNode->data.partCountList, id);
     if (res == 0) {
         printf("Delete formula detail success!\n");
+
+        writeFormulaToFile(global);
+
     } else {
         printf("Delete formula detail failed!\n");
     }
@@ -361,7 +369,7 @@ void showDeletePartCountMenu(Global *global, FormulaNode *formulaNode) {
 void showUpdatePartCountMenu(Global *global, FormulaNode *formulaNode) {
     char *id = (char *) malloc(sizeof(char));
     int count;
-    printf("--------------Update formula detail--------------\n");
+    printf("─────────────── Update formula detail ───────────────\n");
     printf("Please enter the formula detail part id: ");
     scanf("%s", id);
     PartCountNode *node = findPartCountNodeById(formulaNode->data.partCountList, id);

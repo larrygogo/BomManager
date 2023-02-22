@@ -83,94 +83,94 @@ CMakeFiles/BomManager.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/main.c -o CMakeFiles/BomManager.dir/main.c.s
 
-CMakeFiles/BomManager.dir/lib/menu.c.o: CMakeFiles/BomManager.dir/flags.make
-CMakeFiles/BomManager.dir/lib/menu.c.o: /Users/larry/CLionProjects/BomManager/lib/menu.c
-CMakeFiles/BomManager.dir/lib/menu.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BomManager.dir/lib/menu.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/lib/menu.c.o -MF CMakeFiles/BomManager.dir/lib/menu.c.o.d -o CMakeFiles/BomManager.dir/lib/menu.c.o -c /Users/larry/CLionProjects/BomManager/lib/menu.c
+CMakeFiles/BomManager.dir/core/BOMMenu.c.o: CMakeFiles/BomManager.dir/flags.make
+CMakeFiles/BomManager.dir/core/BOMMenu.c.o: /Users/larry/CLionProjects/BomManager/core/BOMMenu.c
+CMakeFiles/BomManager.dir/core/BOMMenu.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BomManager.dir/core/BOMMenu.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/core/BOMMenu.c.o -MF CMakeFiles/BomManager.dir/core/BOMMenu.c.o.d -o CMakeFiles/BomManager.dir/core/BOMMenu.c.o -c /Users/larry/CLionProjects/BomManager/core/BOMMenu.c
 
-CMakeFiles/BomManager.dir/lib/menu.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/lib/menu.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/lib/menu.c > CMakeFiles/BomManager.dir/lib/menu.c.i
+CMakeFiles/BomManager.dir/core/BOMMenu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/core/BOMMenu.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/core/BOMMenu.c > CMakeFiles/BomManager.dir/core/BOMMenu.c.i
 
-CMakeFiles/BomManager.dir/lib/menu.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/lib/menu.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/lib/menu.c -o CMakeFiles/BomManager.dir/lib/menu.c.s
+CMakeFiles/BomManager.dir/core/BOMMenu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/core/BOMMenu.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/core/BOMMenu.c -o CMakeFiles/BomManager.dir/core/BOMMenu.c.s
 
-CMakeFiles/BomManager.dir/lib/part.c.o: CMakeFiles/BomManager.dir/flags.make
-CMakeFiles/BomManager.dir/lib/part.c.o: /Users/larry/CLionProjects/BomManager/lib/part.c
-CMakeFiles/BomManager.dir/lib/part.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BomManager.dir/lib/part.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/lib/part.c.o -MF CMakeFiles/BomManager.dir/lib/part.c.o.d -o CMakeFiles/BomManager.dir/lib/part.c.o -c /Users/larry/CLionProjects/BomManager/lib/part.c
+CMakeFiles/BomManager.dir/core/BOMPart.c.o: CMakeFiles/BomManager.dir/flags.make
+CMakeFiles/BomManager.dir/core/BOMPart.c.o: /Users/larry/CLionProjects/BomManager/core/BOMPart.c
+CMakeFiles/BomManager.dir/core/BOMPart.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BomManager.dir/core/BOMPart.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/core/BOMPart.c.o -MF CMakeFiles/BomManager.dir/core/BOMPart.c.o.d -o CMakeFiles/BomManager.dir/core/BOMPart.c.o -c /Users/larry/CLionProjects/BomManager/core/BOMPart.c
 
-CMakeFiles/BomManager.dir/lib/part.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/lib/part.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/lib/part.c > CMakeFiles/BomManager.dir/lib/part.c.i
+CMakeFiles/BomManager.dir/core/BOMPart.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/core/BOMPart.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/core/BOMPart.c > CMakeFiles/BomManager.dir/core/BOMPart.c.i
 
-CMakeFiles/BomManager.dir/lib/part.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/lib/part.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/lib/part.c -o CMakeFiles/BomManager.dir/lib/part.c.s
+CMakeFiles/BomManager.dir/core/BOMPart.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/core/BOMPart.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/core/BOMPart.c -o CMakeFiles/BomManager.dir/core/BOMPart.c.s
 
-CMakeFiles/BomManager.dir/lib/formula.c.o: CMakeFiles/BomManager.dir/flags.make
-CMakeFiles/BomManager.dir/lib/formula.c.o: /Users/larry/CLionProjects/BomManager/lib/formula.c
-CMakeFiles/BomManager.dir/lib/formula.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BomManager.dir/lib/formula.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/lib/formula.c.o -MF CMakeFiles/BomManager.dir/lib/formula.c.o.d -o CMakeFiles/BomManager.dir/lib/formula.c.o -c /Users/larry/CLionProjects/BomManager/lib/formula.c
+CMakeFiles/BomManager.dir/core/BOMFormula.c.o: CMakeFiles/BomManager.dir/flags.make
+CMakeFiles/BomManager.dir/core/BOMFormula.c.o: /Users/larry/CLionProjects/BomManager/core/BOMFormula.c
+CMakeFiles/BomManager.dir/core/BOMFormula.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BomManager.dir/core/BOMFormula.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/core/BOMFormula.c.o -MF CMakeFiles/BomManager.dir/core/BOMFormula.c.o.d -o CMakeFiles/BomManager.dir/core/BOMFormula.c.o -c /Users/larry/CLionProjects/BomManager/core/BOMFormula.c
 
-CMakeFiles/BomManager.dir/lib/formula.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/lib/formula.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/lib/formula.c > CMakeFiles/BomManager.dir/lib/formula.c.i
+CMakeFiles/BomManager.dir/core/BOMFormula.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/core/BOMFormula.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/core/BOMFormula.c > CMakeFiles/BomManager.dir/core/BOMFormula.c.i
 
-CMakeFiles/BomManager.dir/lib/formula.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/lib/formula.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/lib/formula.c -o CMakeFiles/BomManager.dir/lib/formula.c.s
+CMakeFiles/BomManager.dir/core/BOMFormula.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/core/BOMFormula.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/core/BOMFormula.c -o CMakeFiles/BomManager.dir/core/BOMFormula.c.s
 
-CMakeFiles/BomManager.dir/lib/partCount.c.o: CMakeFiles/BomManager.dir/flags.make
-CMakeFiles/BomManager.dir/lib/partCount.c.o: /Users/larry/CLionProjects/BomManager/lib/partCount.c
-CMakeFiles/BomManager.dir/lib/partCount.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BomManager.dir/lib/partCount.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/lib/partCount.c.o -MF CMakeFiles/BomManager.dir/lib/partCount.c.o.d -o CMakeFiles/BomManager.dir/lib/partCount.c.o -c /Users/larry/CLionProjects/BomManager/lib/partCount.c
+CMakeFiles/BomManager.dir/core/BOMPartCount.c.o: CMakeFiles/BomManager.dir/flags.make
+CMakeFiles/BomManager.dir/core/BOMPartCount.c.o: /Users/larry/CLionProjects/BomManager/core/BOMPartCount.c
+CMakeFiles/BomManager.dir/core/BOMPartCount.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BomManager.dir/core/BOMPartCount.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/core/BOMPartCount.c.o -MF CMakeFiles/BomManager.dir/core/BOMPartCount.c.o.d -o CMakeFiles/BomManager.dir/core/BOMPartCount.c.o -c /Users/larry/CLionProjects/BomManager/core/BOMPartCount.c
 
-CMakeFiles/BomManager.dir/lib/partCount.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/lib/partCount.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/lib/partCount.c > CMakeFiles/BomManager.dir/lib/partCount.c.i
+CMakeFiles/BomManager.dir/core/BOMPartCount.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/core/BOMPartCount.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/core/BOMPartCount.c > CMakeFiles/BomManager.dir/core/BOMPartCount.c.i
 
-CMakeFiles/BomManager.dir/lib/partCount.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/lib/partCount.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/lib/partCount.c -o CMakeFiles/BomManager.dir/lib/partCount.c.s
+CMakeFiles/BomManager.dir/core/BOMPartCount.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/core/BOMPartCount.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/core/BOMPartCount.c -o CMakeFiles/BomManager.dir/core/BOMPartCount.c.s
 
-CMakeFiles/BomManager.dir/lib/utils.c.o: CMakeFiles/BomManager.dir/flags.make
-CMakeFiles/BomManager.dir/lib/utils.c.o: /Users/larry/CLionProjects/BomManager/lib/utils.c
-CMakeFiles/BomManager.dir/lib/utils.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BomManager.dir/lib/utils.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/lib/utils.c.o -MF CMakeFiles/BomManager.dir/lib/utils.c.o.d -o CMakeFiles/BomManager.dir/lib/utils.c.o -c /Users/larry/CLionProjects/BomManager/lib/utils.c
+CMakeFiles/BomManager.dir/core/BOMUtils.c.o: CMakeFiles/BomManager.dir/flags.make
+CMakeFiles/BomManager.dir/core/BOMUtils.c.o: /Users/larry/CLionProjects/BomManager/core/BOMUtils.c
+CMakeFiles/BomManager.dir/core/BOMUtils.c.o: CMakeFiles/BomManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BomManager.dir/core/BOMUtils.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BomManager.dir/core/BOMUtils.c.o -MF CMakeFiles/BomManager.dir/core/BOMUtils.c.o.d -o CMakeFiles/BomManager.dir/core/BOMUtils.c.o -c /Users/larry/CLionProjects/BomManager/core/BOMUtils.c
 
-CMakeFiles/BomManager.dir/lib/utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/lib/utils.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/lib/utils.c > CMakeFiles/BomManager.dir/lib/utils.c.i
+CMakeFiles/BomManager.dir/core/BOMUtils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BomManager.dir/core/BOMUtils.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/larry/CLionProjects/BomManager/core/BOMUtils.c > CMakeFiles/BomManager.dir/core/BOMUtils.c.i
 
-CMakeFiles/BomManager.dir/lib/utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/lib/utils.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/lib/utils.c -o CMakeFiles/BomManager.dir/lib/utils.c.s
+CMakeFiles/BomManager.dir/core/BOMUtils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BomManager.dir/core/BOMUtils.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/larry/CLionProjects/BomManager/core/BOMUtils.c -o CMakeFiles/BomManager.dir/core/BOMUtils.c.s
 
 # Object files for target BomManager
 BomManager_OBJECTS = \
 "CMakeFiles/BomManager.dir/main.c.o" \
-"CMakeFiles/BomManager.dir/lib/menu.c.o" \
-"CMakeFiles/BomManager.dir/lib/part.c.o" \
-"CMakeFiles/BomManager.dir/lib/formula.c.o" \
-"CMakeFiles/BomManager.dir/lib/partCount.c.o" \
-"CMakeFiles/BomManager.dir/lib/utils.c.o"
+"CMakeFiles/BomManager.dir/core/BOMMenu.c.o" \
+"CMakeFiles/BomManager.dir/core/BOMPart.c.o" \
+"CMakeFiles/BomManager.dir/core/BOMFormula.c.o" \
+"CMakeFiles/BomManager.dir/core/BOMPartCount.c.o" \
+"CMakeFiles/BomManager.dir/core/BOMUtils.c.o"
 
 # External object files for target BomManager
 BomManager_EXTERNAL_OBJECTS =
 
 BomManager: CMakeFiles/BomManager.dir/main.c.o
-BomManager: CMakeFiles/BomManager.dir/lib/menu.c.o
-BomManager: CMakeFiles/BomManager.dir/lib/part.c.o
-BomManager: CMakeFiles/BomManager.dir/lib/formula.c.o
-BomManager: CMakeFiles/BomManager.dir/lib/partCount.c.o
-BomManager: CMakeFiles/BomManager.dir/lib/utils.c.o
+BomManager: CMakeFiles/BomManager.dir/core/BOMMenu.c.o
+BomManager: CMakeFiles/BomManager.dir/core/BOMPart.c.o
+BomManager: CMakeFiles/BomManager.dir/core/BOMFormula.c.o
+BomManager: CMakeFiles/BomManager.dir/core/BOMPartCount.c.o
+BomManager: CMakeFiles/BomManager.dir/core/BOMUtils.c.o
 BomManager: CMakeFiles/BomManager.dir/build.make
 BomManager: CMakeFiles/BomManager.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/larry/CLionProjects/BomManager/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable BomManager"

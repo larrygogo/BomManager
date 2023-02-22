@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "part.h"
+#include "../include/BOMPart.h"
 
 PartNode *createPartListHead() {
     PartNode *head = NULL;
@@ -26,7 +26,6 @@ int createPart(PartNode *list, Part data) {
     newNode->next = NULL;
 
     while (head) {
-        printf("%d\n", NULL != head->next);
         if(NULL != head->next && strcmp(head->next->data.id, data.id) == 0) {
             printf("id: %s %s already exists\n", head->next->data.id, data.id);
             free(newNode);
@@ -82,14 +81,15 @@ int updatePartById(PartNode *list, char *id, Part data) {
 
 void showPartList(PartNode *list) {
     PartNode *head = list;
-    printf("-------------------------------- Part List -----------------------------------\n");
-    printf("%-20s\t%-20s\t%-20s\t%-20s\n", "ID", "Part Name", "Total", "Used");
+    printf("┌─────────────────────────────────────── Part List ─────────────────────────────────────────┐\n");
+    printf("│%-20s\t%-20s\t%-20s\t%-20s│\n", "ID", "Part Name", "Total", "Used");
+    printf("├───────────────────────────────────────────────────────────────────────────────────────────┤\n");
     head = head->next;
     while (head != NULL) {
-        printf("%-20s\t%-20s\t%-20d\t%-20d\n", head->data.id, head->data.name, head->data.total, head->data.used);
+        printf("│%-20s\t%-20s\t%-20d\t%-20d│\n", head->data.id, head->data.name, head->data.total, head->data.used);
         head = head->next;
     }
-    printf("------------------------------------------------------------------------------\n");
+    printf("└───────────────────────────────────────────────────────────────────────────────────────────┘\n");
 }
 
 PartNode *findPartNodeById(PartNode *list, char *id) {

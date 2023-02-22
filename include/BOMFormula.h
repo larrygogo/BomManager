@@ -1,6 +1,6 @@
 #ifndef BOM_MANAGER_FORMULA_H
 #define BOM_MANAGER_FORMULA_H
-#include "types.h"
+#include "BOMTypes.h"
 
 FormulaNode *createFormulaListHead();
 

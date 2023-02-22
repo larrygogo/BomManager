@@ -1,5 +1,5 @@
 CMakeFiles/BomManager.dir/main.c.o: \
   /Users/larry/CLionProjects/BomManager/main.c \
-  /Users/larry/CLionProjects/BomManager/lib/types.h \
-  /Users/larry/CLionProjects/BomManager/lib/menu.h \
-  /Users/larry/CLionProjects/BomManager/lib/utils.h
+  /Users/larry/CLionProjects/BomManager/include/BOMTypes.h \
+  /Users/larry/CLionProjects/BomManager/include/BOMMenu.h \
+  /Users/larry/CLionProjects/BomManager/include/BOMUtils.h

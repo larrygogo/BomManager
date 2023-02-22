@@ -1,6 +1,6 @@
 #ifndef BOM_MANAGER_MENU_H
 #define BOM_MANAGER_MENU_H
-#include "utils.h"
+#include "BOMUtils.h"
 
 // 展示菜单
 void showMainMenu(Global *global);

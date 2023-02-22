@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "part.h"
-#include "formula.h"
+#include "../include/BOMPart.h"
+#include "../include/BOMFormula.h"
 
 FormulaNode *createFormulaListHead() {
     FormulaNode *head = NULL;
@@ -92,7 +92,7 @@ int executeFormulaById(FormulaNode *list, PartNode *partList, char *id) {
                     printf("Not found part id: %s\n", partCount.part.id);
                     return -1;
                 } else if(partNode->data.used + partCount.count > partNode->data.total) {
-                    printf("Not enough part id: %s\n", partCount.part.id);
+                    printf("Not enough part id: %s，missing quantity: %d\n", partCount.part.id, partNode->data.used + partCount.count - partNode->data.total);
                     return -1;
                 }
                 partCountHead = partCountHead->next;
@@ -118,14 +118,15 @@ int executeFormulaById(FormulaNode *list, PartNode *partList, char *id) {
 
 void showFormulaList(FormulaNode *list) {
     FormulaNode *head = list;
-    printf("-----------------------------------------------------------------------------------\n");
-    printf("%-20s\t%-20s\t%-20s\n", "ID", "Formula Name", "Execute Count");
+    printf("┌────────────────────────── Formula List ───────────────────────────┐\n");
+    printf("│%-20s\t%-20s\t%-20s│\n", "ID", "Formula Name", "Execute Count");
+    printf("├───────────────────────────────────────────────────────────────────┤\n");
     head = head->next;
     while (head != NULL) {
-        printf("%-20s\t%-20s\t%-20d\n", head->data.id, head->data.name, head->data.executeCount);
+        printf("│%-20s\t%-20s\t%-20d│\n", head->data.id, head->data.name, head->data.executeCount);
         head = head->next;
     }
-    printf("-----------------------------------------------------------------------------------\n");
+    printf("└───────────────────────────────────────────────────────────────────┘\n");
 }
 
 FormulaNode *findFormulaNodeById(FormulaNode *list, char id[255]) {

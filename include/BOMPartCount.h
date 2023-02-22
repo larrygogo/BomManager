@@ -1,6 +1,6 @@
 #ifndef BOM_MANAGER_PART_COUNT_H
 #define BOM_MANAGER_PART_COUNT_H
-#include "types.h"
+#include "BOMTypes.h"
 
 PartCountNode *createPartCountListHead();
 

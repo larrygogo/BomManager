@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "partCount.h"
+#include "../include/BOMPartCount.h"
 
 PartCountNode *createPartCountListHead() {
     PartCountNode *head = NULL;
@@ -86,12 +86,13 @@ int updatePartCountById(PartCountNode *list, char *id, PartCount data) {
 
 void showPartCountList(PartCountNode *list) {
     PartCountNode *head = list;
-    printf("-----------------------------------------------------------------------------------\n");
-    printf("%-20s\t%-20s\t%-20s\n", "Part ID", "Part Name", "Count");
+    printf("┌───────────────────────── Formula Details ─────────────────────────┐\n");
+    printf("│%-20s\t%-20s\t%-20s│\n", "Part ID", "Part Name", "Count");
+    printf("├───────────────────────────────────────────────────────────────────┤\n");
     head = head->next;
     while (head != NULL) {
-        printf("%-20s\t%-20s\t%-20d\n",head->data.part.id, head->data.part.name, head->data.count);
+        printf("│%-20s\t%-20s\t%-20d│\n",head->data.part.id, head->data.part.name, head->data.count);
         head = head->next;
     }
-    printf("-----------------------------------------------------------------------------------\n");
+    printf("└───────────────────────────────────────────────────────────────────┘\n");
 }

@@ -1,6 +1,6 @@
-#include "lib/types.h"
-#include "lib/menu.h"
-#include "lib/utils.h"
+#include "include/BOMTypes.h"
+#include "include/BOMMenu.h"
+#include "include/BOMUtils.h"
 
 int main() {
     Global *global = init();
